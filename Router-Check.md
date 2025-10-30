@@ -96,15 +96,15 @@ Session	Auto when logged in via /admin/
 
 #  Quick End-to-End Test Checklist
 Step	Action	Endpoint	Expected
-1️⃣	Register new user	/api/users/	201
-2️⃣	Get token	/api/token/login/	200
-3️⃣	View menu items	/api/menu-items/	200
-4️⃣	Try POST menu item as customer	/api/menu-items/	403
-5️⃣	Add to cart	/api/cart/menu-items/	201
-6️⃣	Create order	/api/orders/	201
-7️⃣	View my orders	/api/orders/	200
-8️⃣	Manager assigns delivery crew	/api/orders/{id}/	200
-9️⃣	Delivery crew marks as delivered	/api/orders/{id}/	200
+1. Register new user	/api/users/	201
+2. Get token	/api/token/login/	200
+3. View menu items	/api/menu-items/	200
+4. Try POST menu item as customer	/api/menu-items/	403
+5. Add to cart	/api/cart/menu-items/	201
+6. Create order	/api/orders/	201
+7. View my orders	/api/orders/	200
+8. Manager assigns delivery crew	/api/orders/{id}/	200
+9. Delivery crew marks as delivered	/api/orders/{id}/	200
 
 # Testing Tips in Insomnia
 Always include your Authorization Header:
