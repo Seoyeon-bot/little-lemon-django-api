@@ -28,8 +28,8 @@ Django REST Framework Setup
 pip install djangorestframework
 Add to INSTALLED_APPS in settings.py:
 INSTALLED_APPS = [
-    ...,
-    'rest_framework',
+...,
+'rest_framework',
 ]
 2. Enable XML Renderer
 pipenv install djangorestframework-xml
