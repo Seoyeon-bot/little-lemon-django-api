@@ -24,6 +24,7 @@ python3 manage.py runserver
 
 # 4. Install Dependencies
 Django REST Framework Setup
+
 1. Install DRF
 pip install djangorestframework
 Add to INSTALLED_APPS in settings.py:
@@ -31,33 +32,30 @@ INSTALLED_APPS = [
 ...,
 'rest_framework',
 ]
+
 2. Enable XML Renderer
 pipenv install djangorestframework-xml
 Add the renderer configuration in settings.py:
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
-        'rest_framework.renderers.XMLRenderer',
-    ]
+    'DEFAULT_RENDERER_CLASSES': [ 'rest_framework.renderers.JSONRenderer','rest_framework.renderers.BrowsableAPIRenderer','rest_framework.renderers.XMLRenderer',
+]
 }
+
 3. Djoser (User Management + Authentication)
 Install Djoser and JWT support:
 pip install djoser djangorestframework-simplejwt
 Add to INSTALLED_APPS in settings.py:
 INSTALLED_APPS = [
-    ...,
-    'rest_framework',
-    'rest_framework.authtoken',
-    'djoser',
-    'littlelemonDRF',  # your Django app
+    ...,'rest_framework','rest_framework.authtoken','djoser','littlelemonDRF',  # your Django app
 ]
+
 Configure REST framework with JWT authentication:
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
 Add Djoser settings in settings.py:
 DJOSER = {
     'USER_ID_FIELD': 'id',
