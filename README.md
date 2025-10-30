@@ -170,3 +170,28 @@ Authenticated API access (Token & Session)
 Filtering, searching, and ordering
 Pagination & throttling
 XML, JSON, and browsable API rendering
+
+
+# Installation
+Clone the repository
+git clone https://github.com/Seoyeon-bot/little-lemon-django-api.git
+cd little-lemon-django-api
+Create virtual environment
+pip install pipenv  # if not installed
+pipenv shell
+
+# Install dependencies
+pipenv install
+pip install -r requirements.txt  # if using requirements.txt
+
+# Apply migrations
+python manage.py makemigrations
+python manage.py migrate
+Create superuser (for /admin/)
+python manage.py createsuperuser
+
+# Running the Project
+python manage.py runserver
+Visit your project in the browser:
+Admin: http://127.0.0.1:8000/admin/
+API root: http://127.0.0.1:8000/api/
