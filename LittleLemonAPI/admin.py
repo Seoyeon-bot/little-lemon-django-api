@@ -1,0 +1,11 @@
+from django.contrib import admin
+from .models import Category, Cart, MenuItem, Order, OrderItem
+# Register your models here so its visible in /admin/ page 
+from django.contrib.auth.models import User 
+
+
+admin.site.register(Category)
+admin.site.register(MenuItem)
+admin.site.register(Cart)
+admin.site.register(Order)
+admin.site.register(OrderItem)
